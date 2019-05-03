@@ -1,0 +1,13 @@
+.buttons
+   margin-top: 60px
+   a
+      @include btn($bg: $active-color, $two-button: true)
+
+@media (max-width: 560px)
+   .buttons
+      margin-top: 40px
+      a
+         display: block
+         margin: 10px auto
+         &:first-child
+            margin: 15px auto

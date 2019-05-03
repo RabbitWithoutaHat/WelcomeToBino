@@ -1,0 +1,80 @@
+.advantages
+   border-bottom: 1px solid #e6e7eb
+   padding-bottom: 60px
+   margin-bottom: 140px
+   &__block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+   &__element
+      flex-basis: 23%
+      margin: 20px 0
+      text-align: center
+      p
+         font-family: 'Source Sans Pro', sans-serif
+         font-size: 12px
+         line-height: 20px
+         font-weight: 300
+         letter-spacing: 0.9px
+         color: $paragraph-text-gray
+      .advantages__title
+         font-family: 'Open Sans', sans-serif
+         font-size: 18px
+         line-height: 1.2
+         font-weight: 600
+         text-transform: uppercase
+         letter-spacing: 1.35px
+         color: $gray
+         &::after
+            content: ''
+            width: 41px
+            height: 1px
+            background-color: $white
+            border-bottom: 1px solid $gray
+            display: block
+            margin: 15px auto
+      &:hover
+         .advantages__icon
+            transition: all 600ms
+            transform: rotate(45deg)
+            border-color: $active-color
+            .advantages__img, svg
+               transition: all 600ms
+               transform: translate(-50%, -50%) rotate(-45deg)
+         .advantages__title
+            color: $active-color
+
+   &__icon
+      width: 73px
+      height: 73px
+      border: 1px solid $advantages-border-gray
+      position: relative
+      margin: 20px auto
+   &__img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 30px
+      height: 30px
+      fill: $active-color
+      &_small
+         width: 35px
+         height: 40px
+      &_big
+         width: 27px
+         height: 27px
+@media (max-width: 980px)
+   .advantages
+      padding-bottom: 50px
+      margin-bottom: 50px
+
+@media (max-width: 768px)
+   .advantages
+      &__element
+         flex-basis: 49%
+
+@media (max-width: 480px)
+   .advantages
+      &__element
+         flex-basis: 100%

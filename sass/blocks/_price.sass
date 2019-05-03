@@ -1,0 +1,152 @@
+.price
+   margin: 140px auto
+   text-align: center
+   .price__title
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 36px
+      font-weight: 700
+      letter-spacing: 0.1em
+      color: $gray
+      &+p
+         font-size: 14px
+         line-height: 29px
+         font-weight: 400
+         color: $paragraph-text-gray
+         margin: 28px 0
+         padding: 0px 10px
+   &__devider
+      @include devider($paragraph-text-gray)
+   &__block
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      margin-top: 60px
+   &__element
+      flex-basis: 31%
+      text-align: center
+      background-color: $white-gray
+      &:hover
+         .price__top
+            transition: all 500ms
+            background-color: $active-color
+   &__top
+      background-color: $paragraph-text-gray
+   .price__name
+      font-size: 24px
+      line-height: 1.2
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 1.8px
+      color: $white
+      padding-top: 50px
+      padding-bottom: 136px
+      margin: 0
+   &__bottom
+   li
+      font-size: 14px
+      line-height: 40px
+      font-weight: 600
+      color: $paragraph-text-gray
+   &__number
+      width: 153px
+      height: 153px
+      box-shadow: 0 0 0 10px rgba(244, 245, 249,.25)
+      left: 50%
+      top: 0
+      margin: -86px auto 0
+      border-radius: 50%
+      background-color: $white
+      padding: 46px 0
+      p
+         font-family: 'Source Sans Pro', sans-serif
+         font-size: 39.6px
+         line-height: 45px
+         font-weight: 700
+         color: $paragraph-text-gray
+         span
+            display: block
+            font-size: 13.2px
+            line-height: 21px
+            font-weight: 400
+   &__btn
+      @include btn()
+      margin: 40px auto 46px
+      width: 153px
+@media (max-width: 980px)
+   .price
+      margin: 70px auto
+      &__block
+         align-items: center
+      &__element
+         flex-basis: 50%
+         // &:last-child
+         //    flex-basis: 100%
+            .price__number
+               padding: 35px 0
+               p
+                  font-size: 53px
+                  line-height: 60px
+                  span
+                     font-size: 13.2px
+                     line-height: 21px
+                     font-weight: 400
+            li
+               font-size: 20px
+               line-height: 50px
+               font-weight: 700
+            .price__btn
+               width: 60%
+      &__wrap
+         padding: 0
+
+@media (max-width: 768px)
+   .price
+      &__element
+         flex-basis: 100%
+         .price__number
+            padding: 35px 0
+            p
+               font-size: 46px
+               line-height: 60px
+               span
+                  font-size: 13.2px
+                  line-height: 21px
+                  font-weight: 400
+         li
+            font-size: 18px
+            line-height: 40px
+            font-weight: 700
+         .price__btn
+            width: 60%
+         // &:last-child
+         //    .price__number
+         //       p
+         //          font-size: 46px
+         //    li
+         //       font-size: 20px
+         //       line-height: 50px
+         //       font-weight: 700
+
+@media (max-width: 480px)
+   .price
+      &__element
+         .price__number
+            padding: 38px 0
+            p
+               font-size: 40px
+               line-height: 50px
+         li
+            font-size: 14px
+            line-height: 35px
+            font-weight: 700
+         // &:last-child
+         //    .price__number
+         //       p
+         //          font-size: 40px
+         //          line-height: 50px
+         //    li
+         //       font-size: 14px
+         //       line-height: 35px
+         //       font-weight: 700
+      &__btn
+         margin: 20px auto 40px

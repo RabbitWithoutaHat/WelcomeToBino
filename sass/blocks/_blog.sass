@@ -1,0 +1,181 @@
+.blog
+   text-align: center
+   padding: 120px 0 140px
+   background-color: $white-gray
+   .blog__title
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 36px
+      font-weight: 700
+      line-height: 40px
+      letter-spacing: 0.1em
+      color: $gray
+      + p
+         font-size: 14px
+         line-height: 21px
+         font-weight: 400
+         color: $paragraph-text-gray
+         margin: 28px auto
+         padding: 0px 10px
+         max-width: 650px
+   &__devider
+      @include devider($paragraph-text-gray)
+   &__block
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      margin-top: 50px
+   &__element
+      flex-basis: 50%
+      display: flex
+      flex-wrap: wrap
+      &--reverse
+         .blog__img
+            order: 2
+         .blog__text
+            order: 1
+            &::before
+               border-right: 30px solid transparent
+               border-left: 28px solid $active-color
+               right: -65px
+               left: auto
+   &__img
+      flex-basis: 50%
+      img
+         display: block
+         width: 100%
+         object-fit: cover
+   &__text
+      flex-basis: 50%
+      background-color: $active-color
+      padding: 40px 25px
+      position: relative
+      text-align: left
+      &::before
+         content: ''
+         border: 35px solid transparent
+         border-right: 28px solid $active-color
+         position: absolute
+         top: 50%
+         left: -55px
+         transform: translate(-12%, -50%)
+      a
+         font-size: 14px
+         line-height: 20px
+         font-weight: 400
+         font-style: italic
+         color: $white
+   &__category
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.05em
+      color: $white
+   &__name
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 24px
+      font-weight: 600
+      letter-spacing: 0.05em
+      color: $white
+      margin: 20px 0 40px
+      &::after
+         content: ''
+         display: block
+         width: 44px
+         height: 4px
+         background-color: #ffffff
+         margin-top: 15px
+      + p
+         font-size: 12px
+         line-height: 16px
+         line-height: 25px
+         font-weight: 400
+         color: $white
+         margin-bottom: 25px
+
+
+
+@media (max-width: 1470px)
+   .blog
+      &__element
+         flex-basis: 100%
+         &:nth-child(odd)
+            .blog__img
+               order: 2
+            .blog__text
+               order: 1
+               &::before
+                  border: 35px solid transparent
+                  border-left: 28px solid $active-color
+                  left: auto
+                  right: -70px
+
+         &:nth-child(even)
+            .blog__img
+               order: 1
+            .blog__text
+               order: 2
+               &::before
+                  border: 35px solid transparent
+                  border-right: 28px solid $active-color
+                  left: -55px
+                  right: auto
+
+      &__text
+         padding: 80px 100px 40px
+         a
+            font-size: 22px
+      &__category
+         font-size: 18px
+      &__name
+         font-size: 36px
+         margin: 35px 0 70px
+         + p
+            font-size: 22px
+            line-height: 35px
+            margin-bottom: 25px
+
+@media (max-width: 1320px)
+   .blog
+      &__text
+         padding: 40px 50px 20px
+@media (max-width: 1100px)
+   .blog
+      &__text
+         padding: 40px 40px 20px
+         a
+            font-size: 16px
+      &__category
+         font-size: 16px
+      &__name
+         font-size: 25px
+         margin: 20px 0 35px
+         + p
+            font-size: 16px
+            line-height: 25px
+            margin-bottom: 25px
+
+@media (max-width: 800px)
+   .blog
+      &__element
+         &:nth-child(odd)
+            .blog__text
+               order: 1
+               &::before
+                  border: none
+
+         &:nth-child(even)
+            .blog__img
+               order: 2
+            .blog__text
+               order: 1
+               &::before
+                  border: none
+      &__img
+         flex-basis: 100%
+      &__text
+         flex-basis: 100%
+         padding: 60px
+
+@media (max-width: 800px)
+   .blog
+      &__text
+         padding: 30px

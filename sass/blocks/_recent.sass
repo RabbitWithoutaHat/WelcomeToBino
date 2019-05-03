@@ -1,0 +1,113 @@
+.recent
+   text-align: center
+   margin: 140px auto 0
+   &__devider
+      @include devider($paragraph-text-gray)
+   .recent__title
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 36px
+      font-weight: 700
+      letter-spacing: 0.1em
+      color: $gray
+   p
+      font-size: 14px
+      line-height: 29px
+      font-weight: 400
+      color: $paragraph-text-gray
+      margin: 28px 0
+   &__links
+      margin-bottom: 50px
+      margin-top: 68px
+      a
+         font-size: 14px
+         line-height: 25px
+         font-weight: 500
+         color: $gray
+         text-decoration: none
+         padding: 15px
+         transition: color 300ms, text-shadow 200ms
+         &:hover
+            color: $active-color
+            text-shadow: 0 0 .7px $active-color, 0 0 .7px $active-color
+   &__block
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+   &__element
+      flex-basis: 25%
+      position: relative
+      img
+         display: block
+         width: 100%
+      a
+         text-decoration: none
+         display: block
+         &::after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background-color: rgba(231, 76, 60, 0.8)
+            opacity: 0
+            transition: opacity 500ms
+         &:hover
+            &::after, p
+               opacity: 1
+      p
+         position: absolute
+         z-index: 2
+         bottom: 10%
+         left: 10%
+         opacity: 0
+         transition: opacity 500ms
+         &::before
+                  content: ''
+                  display: block
+                  width: 44px
+                  height: 4px
+                  background-color: $white
+                  margin-bottom: 30px
+         span
+            font-size: 14px
+            font-weight: 400
+            letter-spacing: 0.7px
+            color: $white
+            display: block
+            text-align-last: left
+            &:first-child
+               font-family: 'Source Sans Pro', sans-serif
+               font-size: 24px
+               font-weight: 600
+               letter-spacing: 1.2px
+               color: $white
+               text-transform: uppercase
+@media (max-width: 980px)
+   .recent
+      margin: 80px auto 0
+      &__element
+         p
+            left: 5%
+            bottom: 0
+            margin: 15px 0
+            &::before
+               margin-bottom: 20px
+            span:first-child
+               font-size: 20px
+
+@media (max-width: 768px)
+   .recent
+      &__element
+         flex-basis: 50%
+         p
+            span:first-child
+               font-size: 26px
+      &__links
+         margin-bottom: 35px
+         margin-top: 45px
+
+@media (max-width: 480px)
+   .recent
+      &__element
+         flex-basis: 100%

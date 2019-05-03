@@ -1,0 +1,61 @@
+.integrations
+   text-align: center
+   padding: 140px 0
+   background-color: $white-gray
+   border-bottom: 1px solid #e6e7eb
+   .integrations__title
+      font-family: 'Source Sans Pro', sans-serif
+      font-size: 36px
+      font-weight: 700
+      line-height: 40px
+      letter-spacing: 0.1em
+      color: $gray
+      &+p
+         font-size: 14px
+         line-height: 21px
+         font-weight: 400
+         color: $paragraph-text-gray
+         margin: 28px auto
+         padding: 0px 10px
+         max-width: 650px
+   &__devider
+      @include devider($paragraph-text-gray)
+   &__block
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      margin-top: 50px
+   &__element
+      flex-basis: 18%
+      background-color: $white
+      margin: 15px 0
+      height: 100px
+      display: flex
+      justify-content: center
+      transition: box-shadow 500ms
+      &:hover
+         box-shadow: 0px 0px 25px -10px rgba(31,31,31,0.3)
+      span
+         display: block
+         align-self: center
+      img
+         max-width: 100%
+
+@media (max-width: 980px)
+   .integrations
+      padding: 70px 0 30px
+      &__wrap
+         padding: 0
+      &__element
+         flex-basis: 28%
+         margin: 15px 1.5%
+@media (max-width: 768px)
+   .integrations
+      &__element
+         flex-basis: 45%
+         margin: 15px 2.5%
+@media (max-width: 480px)
+   .integrations
+      &__element
+         flex-basis: 100%
+         margin: 5px 0
