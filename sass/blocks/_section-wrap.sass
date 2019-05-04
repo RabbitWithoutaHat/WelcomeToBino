@@ -1,16 +1,23 @@
 .section-wrap
    position: relative
    &__icon
-      width: 64px
-      height: 64px
-      background-color: $white-gray
-      border: 5px solid rgba(255,255,255,.25)
-      border-radius: 50%
-      position: absolute
-      left: 50%
-      bottom: 7%
-      transform: translate(-50%,0)
-      z-index: 2
+      a
+         width: 64px
+         height: 64px
+         background-color: $white-gray
+         border: 5px solid rgba(255,255,255,.25)
+         box-shadow: 0 0 0 10px rgba(244, 245, 249,.25)
+         border-radius: 50%
+         position: absolute
+         left: 50%
+         bottom: 7%
+         transform: translate(-50%,0)
+         z-index: 2
+         &:hover
+            .section-wrap__img
+               animation-name: rotate
+               animation-duration: 2s
+               animation-iteration-count: infinite
    &__img
       width: 35px
       height: 35px
