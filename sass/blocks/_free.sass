@@ -1,0 +1,45 @@
+.free
+   padding: 150px 0 130px
+   background: url(../img/free-bg.jpg) center no-repeat
+   background-size: cover
+   position: relative
+   text-align: center
+   &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.5)
+   &__wrap
+      z-index: 1
+      position: relative
+   .free__title
+      font-size: 36px
+      line-height: 38px
+      font-weight: 400
+      color: $white
+      margin-bottom: 15px
+      span
+         font-weight: 700
+      + p
+         font-size: 18px
+         line-height: 30px
+         font-weight: 400
+         color: $white
+         margin-bottom: 90px
+   &__btn
+      @include btn()
+
+@media (max-width: 768px)
+   .free
+      padding: 70px 0 60px
+      .free__title
+         font-size: 30px
+         line-height: 35px
+         margin-bottom: 15px
+         + p
+            font-size: 15px
+            line-height: 20px
+            margin-bottom: 40px

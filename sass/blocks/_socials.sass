@@ -1,0 +1,18 @@
+.socials
+   display: flex
+   align-items: center
+   li
+      margin-right: 20px
+   &__img
+      fill: $paragraph-text-gray
+      width: 20px
+      height: 25px
+      transition: all 500ms
+      &:hover
+         fill: $active-color
+
+@media (max-width: 768px)
+   .socials
+      &__img
+         width: 18px
+         height: 22px
